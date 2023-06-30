@@ -1,9 +1,27 @@
 <h2> Список документов, удостоверяющих личность</h2>
 
-<mat-form-field>
+<form>
+    <mat-form-field>
+        <mat-label>Вид документа</mat-label>
+        <mat-select name="docs">
+            <mat-option *ngFor="let doc of docs" [value]="doc.id">
+                {{doc.value}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Номер документа</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Номер" #input>
+    </mat-form-field>
+    <button mat-button color="primary" onclick="">Найти</button>
+</form>
+<!-- <mat-form-field>
     <mat-label>Фильтр</mat-label>
+    <select></select>
     <input matInput (keyup)="applyFilter($event)" placeholder="паспорт" #input>
-</mat-form-field>
+    <input matInput (keyup)="applyFilter($event)" placeholder="паспорт" #input>
+    <input matInput (keyup)="applyFilter($event)" placeholder="паспорт" #input>
+</mat-form-field> -->
 
 <mat-table [dataSource]="dataSource" matSort>
     <ng-container matColumnDef="id">
@@ -45,8 +63,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-    <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-    </tr>
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
 </mat-table>
