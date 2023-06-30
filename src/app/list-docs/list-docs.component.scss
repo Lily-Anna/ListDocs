@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+    font-weight: bold;
+}
+
+td:first-child {
+    width: 5%;
+}
+
+td {
+    width: 20%;
+}
