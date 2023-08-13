@@ -1,0 +1,4 @@
+{
+    "/documents": "/documents",
+    "/documents/:id": "/documents/:id"
+  }

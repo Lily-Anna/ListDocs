@@ -1,0 +1,58 @@
+<h1 mat-dialog-title>Документ</h1>
+<div mat-dialog-content>
+    <form [formGroup]="documentForm" (ngSubmit)="onSubmit()">
+        <div class="row m-r">
+            <mat-checkbox formControlName="isMain">Основной документ, удостоверяющий личность</mat-checkbox>
+            <mat-checkbox formControlName="isArchive">Архивный документ</mat-checkbox>
+        </div>
+        <div class="row m-r">
+            <mat-form-field>
+                <mat-label>Вид документа</mat-label>
+                <mat-select name="type" required formControlName="type">
+                    <mat-option *ngFor="let doc of docs" [value]="doc.id">
+                        {{doc.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Серия</mat-label>
+                <input matInput formControlName="series">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Номер</mat-label>
+                <input matInput formControlName="number" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Дата выдачи</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="issueDate" >
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="row m-r">
+            <mat-form-field>
+                <mat-label>Организация, выдавшая документ</mat-label>
+                <mat-select name="organisation" formControlName="organisation">
+                    <mat-option *ngFor="let org of organisation" [value]="org.id">
+                        {{org.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Код</mat-label>
+                <input matInput formControlName="code" placeholder="___-___" pattern="[0-9]{3}-[0-9]{3}">
+                <mat-error *ngIf="documentForm.get('code')?.hasError('pattern')">Неверный формат. Пожалуйста введите в
+                    виде:
+                    ___-___</mat-error>
+            </mat-form-field>
+        </div>
+<div mat-dialog-actions class="row m-r">
+    <button mat-button mat-raised-button color="primary" type="submit"
+        [disabled]="documentForm.invalid" >Сохранить</button>
+    <button mat-button [mat-dialog-close]>Выход</button>
+</div>
+    </form>
+</div>

@@ -70,9 +70,16 @@
             },
             "development": {
               "browserTarget": "ListDocs:build:development"
+
             }
-          },
+          },          
           "defaultConfiguration": "development"
+        },
+        "json-server": {
+          "builder": "json-server",
+          "options": {
+            "watch": "json-server/db.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

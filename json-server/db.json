@@ -1,0 +1,388 @@
+{
+  "documents": [
+    {
+      "id": 1,
+      "type": 1,
+      "series": "AB",
+      "number": "123456",
+      "issueDate": "2022-01-01",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 2,
+      "code": "123-456"
+    },
+    {
+      "id": 2,
+      "type": 1,
+      "series": "CD",
+      "number": "789012",
+      "issueDate": "2022-01-02",
+      "isMain": false,
+      "isArchive": false,
+      "organisation": 1,
+      "code": "456-789"
+    },
+    {
+      "id": 3,
+      "type": 1,
+      "series": "EF",
+      "number": "345678",
+      "issueDate": "2022-01-03",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "789-012"
+    },
+    {
+      "id": 4,
+      "type": 2,
+      "series": "GH",
+      "number": "901234",
+      "issueDate": "2022-01-04",
+      "isMain": true,
+      "isArchive": true,
+      "organisation": 2,
+      "code": "234-567"
+    },
+    {
+      "id": 5,
+      "type": 2,
+      "series": "IJ",
+      "number": "567890",
+      "issueDate": "2022-01-05",
+      "isMain": false,
+      "isArchive": false,
+      "organisation": 1,
+      "code": "567-890"
+    },
+    {
+      "id": 6,
+      "type": 3,
+      "series": "KL",
+      "number": "123456",
+      "issueDate": "2022-01-06",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "890-123"
+    },
+    {
+      "id": 7,
+      "type": 1,
+      "series": "MN",
+      "number": "789012",
+      "issueDate": "2022-01-07",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 2,
+      "code": "123-456"
+    },
+    {
+      "id": 8,
+      "type": 2,
+      "series": "OP",
+      "number": "345678",
+      "issueDate": "2022-01-08",
+      "isMain": false,
+      "isArchive": true,
+      "organisation": 1,
+      "code": "456-789"
+    },
+    {
+      "id": 9,
+      "type": 3,
+      "series": "QR",
+      "number": "901234",
+      "issueDate": "2022-01-09",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "789-012"
+    },
+    {
+      "id": 10,
+      "type": 1,
+      "series": "ST",
+      "number": "567890",
+      "issueDate": "2022-01-10",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 2,
+      "code": "234-567"
+    },
+    {
+      "id": 11,
+      "type": 2,
+      "series": "UV",
+      "number": "123456",
+      "issueDate": "2022-01-11",
+      "isMain": false,
+      "isArchive": false,
+      "organisation": 1,
+      "code": "567-890"
+    },
+    {
+      "id": 12,
+      "type": 3,
+      "series": "WX",
+      "number": "789012",
+      "issueDate": "2022-01-12",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "890-123"
+    },
+    {
+      "id": 13,
+      "type": 1,
+      "series": "YZ",
+      "number": "345678",
+      "issueDate": "2022-01-13",
+      "isMain": true,
+      "isArchive": true,
+      "organisation": 2,
+      "code": "123-456"
+    },
+    {
+      "id": 14,
+      "type": 2,
+      "series": "AB",
+      "number": "901234",
+      "issueDate": "2022-01-14",
+      "isMain": false,
+      "isArchive": false,
+      "organisation": 1,
+      "code": "456-789"
+    },
+    {
+      "id": 15,
+      "type": 3,
+      "series": "CD",
+      "number": "567890",
+      "issueDate": "2022-01-15",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "789-012"
+    },
+    {
+      "id": 16,
+      "type": 1,
+      "series": "EF",
+      "number": "123456",
+      "issueDate": "2022-01-16",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 2,
+      "code": "234-567"
+    },
+    {
+      "id": 17,
+      "type": 2,
+      "series": "GH",
+      "number": "789012",
+      "issueDate": "2022-01-17",
+      "isMain": false,
+      "isArchive": true,
+      "organisation": 1,
+      "code": "567-890"
+    },
+    {
+      "id": 18,
+      "type": 3,
+      "series": "IJ",
+      "number": "345678",
+      "issueDate": "2022-01-18",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "890-123"
+    },
+    {
+      "id": 19,
+      "type": 1,
+      "series": "KL",
+      "number": "901234",
+      "issueDate": "2022-01-19",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 2,
+      "code": "123-456"
+    },
+    {
+      "id": 20,
+      "type": 2,
+      "series": "MN",
+      "number": "567890",
+      "issueDate": "2022-01-20",
+      "isMain": false,
+      "isArchive": false,
+      "organisation": 1,
+      "code": "456-789"
+    },
+    {
+      "id": 21,
+      "type": 3,
+      "series": "OP",
+      "number": "123456",
+      "issueDate": "2022-01-21",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "789-012"
+    },
+    {
+      "id": 22,
+      "type": 1,
+      "series": "QR",
+      "number": "789012",
+      "issueDate": "2022-01-22",
+      "isMain": true,
+      "isArchive": true,
+      "organisation": 2,
+      "code": "234-567"
+    },
+    {
+      "id": 23,
+      "type": 2,
+      "series": "ST",
+      "number": "345678",
+      "issueDate": "2022-01-23",
+      "isMain": false,
+      "isArchive": false,
+      "organisation": 1,
+      "code": "567-890"
+    },
+    {
+      "id": 24,
+      "type": 3,
+      "series": "UV",
+      "number": "901234",
+      "issueDate": "2022-01-24",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "890-123"
+    },
+    {
+      "id": 25,
+      "type": 1,
+      "series": "WX",
+      "number": "567890",
+      "issueDate": "25.01.2022",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "000-123"
+    },
+    {
+      "id": 26,
+      "type": 1,
+      "series": "YZ",
+      "number": "123456",
+      "issueDate": "26.01.2022",
+      "isMain": false,
+      "isArchive": true,
+      "organisation": 3,
+      "code": "811-123"
+    },
+    {
+      "id": 27,
+      "type": 2,
+      "series": "AB",
+      "number": "789012",
+      "issueDate": "27.01.2022",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "852-123"
+    },
+    {
+      "id": 28,
+      "type": 3,
+      "series": "CD",
+      "number": "345678",
+      "issueDate": "28.01.2022",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "963-123"
+    },
+    {
+      "id": 29,
+      "type": 2,
+      "series": "EF",
+      "number": "901234",
+      "issueDate": "29.01.2022",
+      "isMain": false,
+      "isArchive": false,
+      "organisation": 3,
+      "code": "890-123"
+    },
+    {
+      "id": 30,
+      "type": 1,
+      "series": "GH",
+      "number": "567890",
+      "issueDate": "30.01.2022",
+      "isMain": true,
+      "isArchive": true,
+      "organisation": 3,
+      "code": "890-123"
+    },
+    {
+      "id": 31,
+      "type": 2,
+      "series": "",
+      "number": "asdasda",
+      "issueDate": null,
+      "isMain": false,
+      "isArchive": false,
+      "organisation": null,
+      "code": ""
+    },
+    {
+      "id": 32,
+      "type": 2,
+      "series": "",
+      "number": "1231231",
+      "issueDate": "2023-07-31T15:00:00.000Z",
+      "isMain": true,
+      "isArchive": false,
+      "organisation": 2,
+      "code": "852-951"
+    }
+  ],
+  "organisation": [
+    {
+      "id": 1,
+      "value": "ГУ МВД Первого района"
+    },
+    {
+      "id": 2,
+      "value": "ГУ МВД Второго района"
+    },
+    {
+      "id": 3,
+      "value": "ГУ МВД Третьего района"
+    },
+    {
+      "id": 4,
+      "value": "ГУ МВД Четвёртого района"
+    }
+  ],
+  "typeDocuments": [
+    {
+      "id": 1,
+      "value": "Паспорт"
+    },
+    {
+      "id": 2,
+      "value": "Загранпаспорт"
+    },
+    {
+      "id": 3,
+      "value": "Водительское удостоверение"
+    }
+  ]
+}
