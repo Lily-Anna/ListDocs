@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import {  MatTableDataSource } from '@angular/material/table';
 import { Document } from '../Model/Document';
@@ -123,9 +123,6 @@ export class ListDocsComponent {
         //обнуляем выбранный элемент
         this.selectedDocument = undefined;
 
-        //переходим на первую страницу
-        this.pageIndex = 0;
-
         //обновляем данные в таблице
         this.applyFilter();
       },
@@ -213,7 +210,10 @@ export class ListDocsComponent {
     });
     //Получение общего количества данных в базе по запросу
     this.servise.getForTypeDocuments(-1, -1, filterData?.type, filterData?.number, this.isArchive).subscribe((count) => {
-      this.totalItems = count.length;
+      
+   
+      this.totalItems = count.length; 
+        console.log('this.totalItems: '+this.totalItems);
     }, (error) => {
       console.log('Error getting document count:', error);
     });
