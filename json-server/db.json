@@ -27,7 +27,7 @@
       "type": 1,
       "series": "EF",
       "number": "345678",
-      "issueDate": "2022-01-03",
+      "issueDate": "2023-07-31T15:00:00.000Z",
       "isMain": true,
       "isArchive": false,
       "organisation": 3,
@@ -329,28 +329,6 @@
       "isArchive": true,
       "organisation": 3,
       "code": "890-123"
-    },
-    {
-      "id": 31,
-      "type": 2,
-      "series": "",
-      "number": "asdasda",
-      "issueDate": null,
-      "isMain": false,
-      "isArchive": false,
-      "organisation": null,
-      "code": ""
-    },
-    {
-      "id": 32,
-      "type": 2,
-      "series": "",
-      "number": "1231231",
-      "issueDate": "2023-07-31T15:00:00.000Z",
-      "isMain": true,
-      "isArchive": false,
-      "organisation": 2,
-      "code": "852-951"
     }
   ],
   "organisation": [

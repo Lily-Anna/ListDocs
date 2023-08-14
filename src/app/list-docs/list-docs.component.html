@@ -1,9 +1,9 @@
 <h2> Список документов, удостоверяющих личность</h2>
 
-<form class="form">
+<form [formGroup]="filterForm" (ngSubmit)="applyFilter()" class="form" >
     <mat-form-field>
         <mat-label>Вид документа</mat-label>
-        <mat-select name="TypeDocuments">
+        <mat-select name="type" formControlName="type">
             <mat-option *ngFor="let doc of docs" [value]="doc.id">
                 {{doc.value}}
             </mat-option>
@@ -11,36 +11,42 @@
     </mat-form-field>
     <mat-form-field>
         <mat-label>Номер документа</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="Номер" #input>
+        <input matInput formControlName="number" placeholder="Номер" #input>
     </mat-form-field>
-    <button mat-raised-button color="primary" onclick="">Найти</button>
-    <button mat-raised-button color="warn" onclick="">Очистить</button>
+    <button mat-raised-button type="submit" color="primary">Найти</button>
+    <button mat-raised-button type="button" color="warn" (click)="clearFilter()">Очистить</button>
 </form>
 <div class="row justify-content-flex-start">
     <button mat-flat-button color="accent" (click)="openAddDialog()">Добавить <mat-icon>add</mat-icon></button>
-    <button mat-flat-button color="primary" [disabled]="selectedDocument==undefined" (click)="openEditDialog()">Редактировать <mat-icon>edit</mat-icon></button>
-    <button mat-flat-button color="warn" [disabled]="selectedDocument ==undefined" (click)="deleteDocument()">Удалить <mat-icon>delete_outline</mat-icon></button>
+    <button mat-flat-button color="primary" [disabled]="selectedDocument==undefined"
+        (click)="openEditDialog()">Редактировать <mat-icon>edit</mat-icon></button>
+    <button mat-flat-button color="warn" [disabled]="selectedDocument ==undefined" (click)="deleteDocument()">Удалить
+        <mat-icon>delete_outline</mat-icon></button>
+</div>
+<div>
+    <mat-checkbox checked="checked" (change)="onChangeArchive($event)">Архивный документ</mat-checkbox>
 </div>
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" #docTbSort="matSort">
+    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+        #docTbSort="matSort">
         <!-- isMain Column -->
         <ng-container matColumnDef="isMain">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element"><mat-icon *ngIf="element.isMain">check</mat-icon></td>
         </ng-container>
-         <!-- id Column -->
+        <!-- id Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>
                 №
             </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
-         <!-- type Column -->
+        <!-- type Column -->
         <ng-container matColumnDef="type">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>
                 Вид документа
             </th>
-            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+            <td mat-cell *matCellDef="let element; let docs">   {{ findDocById(element.type)?.value }} </td>
         </ng-container>
 
         <!-- series Column -->
@@ -67,8 +73,10 @@
             <td mat-cell *matCellDef="let element"> {{element.issueDate}} </td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectedDocumnet(row)" [ngClass]="{'selected': selectedDocument?.id == row.id}"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectedDocumnet(row)"
+            [ngClass]="{'selected': selectedDocument?.id == row.id,'archive': row.isArchive == true }"></tr>
     </table>
+   
     <mat-paginator [length]="totalItems" [pageSize]="pageSize" showFirstLastButtons [pageSizeOptions]="[5, 10, 25, 100]"
         (page)="onPageChange($event)">
     </mat-paginator>

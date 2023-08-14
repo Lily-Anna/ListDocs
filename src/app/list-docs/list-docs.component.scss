@@ -41,7 +41,13 @@ table {
     background-color: #d3d0d0;
 }
 .selected{
-    background-color: #99f5bf;
+    background-color: #92a5be;
+    &:hover{
+        background-color: #92a5bead !important;
+    }
+}
+.archive{
+background-color: #99f5bf;
     &:hover{
         background-color: #99f5bf86 !important;
     }

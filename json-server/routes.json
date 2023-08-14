@@ -1,4 +1,5 @@
 {
     "/documents": "/documents",
-    "/documents/:id": "/documents/:id"
+    "/documents/:id": "/documents/:id",
+    "/documents?isArchive": "/documents?isArchive"
   }
