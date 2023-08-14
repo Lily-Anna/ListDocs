@@ -1,4 +1,6 @@
-<h1 mat-dialog-title>Документ</h1>
+<h1 mat-dialog-title ><span>Документ</span> <button mat-icon-button [mat-dialog-close]="true">
+    <mat-icon>close</mat-icon>
+</button></h1>
 <div mat-dialog-content>
     <form [formGroup]="documentForm" (ngSubmit)="onSubmit()">
         <div class="row m-r">

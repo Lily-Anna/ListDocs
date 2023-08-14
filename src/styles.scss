@@ -9,3 +9,30 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 
 }
+
+.mat-mdc-button-base {
+    margin: 8px;
+}
+
+.mat-calendar-content {
+    padding: 0px 8px 8px 8px !important;
+    outline: none;
+}
+.mat-calendar-table-header th{
+    padding: 0px !important;;
+}
+
+.mdc-dialog__title::before {
+    display: none !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3f51b5 !important;
+    color: #fff !important;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}

@@ -6,6 +6,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataserviceService } from 'src/app/services/dataservice.service';
 import { Organisation } from 'src/app/Model/Organization';
 import { NotificationService } from 'src/app/services/notification.service';
+import { formatDate } from '@angular/common';
+import '@angular/common/locales/global/ru';
 @Component({
   selector: 'app-add-document',
   templateUrl: './add-document.component.html',
@@ -28,12 +30,14 @@ export class AddDocumentComponent {
     private servise: DataserviceService,
     public dialogRef: MatDialogRef<Document>
   ) {
+    const currentDate = new Date();
+currentDate.setHours(0, 0, 0, 0); // Установите время на 00:00:00
     this.documentForm = this.formBuilder.group({
       id: [null],
       type: [null, Validators.required],
       series: [''],
       number: ['', Validators.required],
-      issueDate: [null],
+      issueDate: [formatDate(currentDate, 'dd/MM/yyyy', 'ru')],
       isMain: [false],
       isArchive: [false],
       organisation: [null],
@@ -61,7 +65,8 @@ export class AddDocumentComponent {
   onSubmit() {
     if (this.documentForm.valid) {
       // Получаем данные с формы
-      const documentData = this.documentForm.value;
+      var documentData = this.documentForm.value;
+      documentData.issueDate = this.documentForm.value.issueDate.toISOString().split('T')[0];
       //отправляем запрос на добавление документа
       this.servise.postData(documentData).subscribe(
         (response) => {
