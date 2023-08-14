@@ -1,7 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Document } from '../../../Model/Document';
 import { TypeDocuments } from 'src/app/Model/TypeDocuments';
-import { getAllTypeDocuments } from 'json-server/server'
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataserviceService } from 'src/app/services/dataservice.service';

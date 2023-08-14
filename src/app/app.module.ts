@@ -1,4 +1,4 @@
-import { Injectable, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {MatTableModule} from '@angular/material/table';
@@ -25,15 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListDocsComponent } from './list-docs/list-docs.component';
 import { AddDocumentComponent } from './list-docs/add-document/add-document/add-document.component';
 import { EditDocumentComponent } from './list-docs/edit-document/edit-document/edit-document.component';
-import { MatPaginatorIntl } from '@angular/material/paginator';
 
-export @Injectable() class CustomPaginatorIntl extends MatPaginatorIntl {
-  override itemsPerPageLabel = 'Элементы на странице:';
-  override nextPageLabel = 'Следующая страница';
-  override previousPageLabel = 'Предыдущая страница';
-  override lastPageLabel = 'Последняя страница';
-  override firstPageLabel = 'Первая страница';
-}
 @NgModule({
   
   imports: [
@@ -65,7 +57,7 @@ export @Injectable() class CustomPaginatorIntl extends MatPaginatorIntl {
    AddDocumentComponent,
    EditDocumentComponent
   ],
-  providers: [  { provide: MatPaginatorIntl, useClass: CustomPaginatorIntl }],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
